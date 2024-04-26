@@ -1,3 +1,4 @@
+#include <iostream>
 class Integer {
 private:
     int data;
@@ -7,5 +8,11 @@ public:
     bool operator==(const Integer &t)
     {
         return data == t.data;
+    }
+
+
+    //added
+    void print(){
+        std::cout<<data;
     }
 };
