@@ -473,11 +473,10 @@ public:
              */
         public:
          /* iterator member*/
-            Mylist* belong;
+            const Mylist* belong;
             typename Mylist::iterator cont;
-            T* ptr;
+            const T* ptr;
             int place;
-
             /**
              * return a new iterator which points to the n-next element.
              * if there are not enough elements, the behaviour is undefined.
@@ -603,13 +602,13 @@ public:
             /**
              * *it
              */
-            T& operator*() const {
+            const T& operator*() const {
                 return (*ptr);
             }
             /**
              * it->field
              */
-            T* operator->() const noexcept {
+            const T* operator->() const noexcept {
                 return ptr;
             }
 
